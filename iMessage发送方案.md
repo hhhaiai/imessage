@@ -24,7 +24,7 @@ osascript -e 'tell application "Messages" to send "你的消息内容" to buddy 
 **示例**：
 ```bash
 # 发送到手机号
-osascript -e 'tell application "Messages" to send "Hello World" to buddy "+8615510013680" of (service 1 whose service type is iMessage)'
+osascript -e 'tell application "Messages" to send "Hello World" to buddy "+8615510010000" of (service 1 whose service type is iMessage)'
 
 # 发送到邮箱
 osascript -e 'tell application "Messages" to send "Hello" to buddy "user@example.com" of (service 1 whose service type is iMessage)'
@@ -38,7 +38,7 @@ osascript -e 'tell application "Messages" to send POSIX file "/path/to/file.jpg"
 
 **示例**：
 ```bash
-osascript -e 'tell application "Messages" to send POSIX file "/Users/username/Pictures/photo.png" to buddy "+8615510013680" of (service 1 whose service type is iMessage)'
+osascript -e 'tell application "Messages" to send POSIX file "/Users/username/Pictures/photo.png" to buddy "+8615510010000" of (service 1 whose service type is iMessage)'
 ```
 
 **优点**：
@@ -152,7 +152,7 @@ case "$1" in
         echo "  $0 bulk <收件人列表> <消息>    - 批量发送"
         echo ""
         echo "示例:"
-        echo "  $0 text \"+8615510013680\" \"Hello\""
+        echo "  $0 text \"+8615510010000\" \"Hello\""
         echo "  $0 attach \"user@example.com\" \"/path/to/image.png\""
         echo "  $0 bulk \"user1@example.com,user2@example.com\" \"通知消息\""
         exit 1
@@ -169,12 +169,12 @@ chmod +x imessage.sh
 
 **发送文本**：
 ```bash
-./imessage.sh text "+8615510013680" "Hello World"
+./imessage.sh text "+8615510010000" "Hello World"
 ```
 
 **发送附件**：
 ```bash
-./imessage.sh attach "+8615510013680" "/Users/username/Pictures/photo.png"
+./imessage.sh attach "+8615510010000" "/Users/username/Pictures/photo.png"
 ```
 
 **批量发送**：
@@ -217,7 +217,7 @@ source ~/.zshrc  # 或 source ~/.bash_profile
 imsg
 
 # 使用函数（自定义消息）
-im "+8615510013680" "Hello from alias"
+im "+8615510010000" "Hello from alias"
 ```
 
 **优点**：
@@ -355,7 +355,7 @@ if __name__ == "__main__":
 
 **使用**：
 ```bash
-python3 imessage.py "+8615510013680" "Hello from Python"
+python3 imessage.py "+8615510010000" "Hello from Python"
 ```
 
 ---
